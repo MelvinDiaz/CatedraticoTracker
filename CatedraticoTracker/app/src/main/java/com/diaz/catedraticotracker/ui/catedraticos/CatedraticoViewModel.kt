@@ -32,6 +32,8 @@ class CatedraticoViewModel(
         getCatedraticos()
     }
 
+
+
     companion object {
         val Factory: ViewModelProvider.Factory = viewModelFactory {
             initializer {
