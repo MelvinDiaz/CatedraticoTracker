@@ -2,7 +2,9 @@ package com.diaz.catedraticotracker.data
 
 class RepositoryCatedratico() {
 
-   fun getCatedraticos() = catedraticos
+   fun getCatedraticos(): List<CatedraticoModel> {
+       return catedraticos
+   }
 
     fun getCatedraticosById(id: Int) = catedraticos.find { it.id == id }
 

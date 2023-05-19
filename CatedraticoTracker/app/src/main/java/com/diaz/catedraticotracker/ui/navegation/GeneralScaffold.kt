@@ -6,15 +6,17 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.compose.rememberNavController
+import com.diaz.catedraticotracker.ui.catedraticos.CatedraticoViewModel
 
 @Composable
-fun GeneralScaffold() {
-    val navHostController = NavigationHost()
+fun GeneralScaffold(viewModelCate: CatedraticoViewModel) {
+    val navHostController = rememberNavController()
     Scaffold(
         topBar = { Text(text = "Catedraticos")},
     ) {
         Box(modifier = Modifier.padding(it)){
-            NavigationHost()
+            NavigationHost(viewModelCate)
         }
     }
 }
