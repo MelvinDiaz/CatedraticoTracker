@@ -9,17 +9,6 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun AddCatedraticoScreen(navController: NavHostController) {
-    Scaffold(
-        floatingActionButton = { navController.navigate("add_catedratico_screen") }
-    ) {
-        Box(modifier = Modifier.padding(it)) {
-            CatedraticoScreenSection()
-        }
-
-    }
-}
-
-@Composable
-fun CatedraticoScreenSection() {
 
 }
+
