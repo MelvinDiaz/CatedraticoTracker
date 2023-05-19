@@ -1,6 +1,7 @@
 package com.diaz.catedraticotracker.ui.navegation
 
 import androidx.compose.runtime.Composable
+import androidx.lifecycle.ViewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -20,7 +21,7 @@ fun NavigationHost(viewModelCate: CatedraticoViewModel) {
             CatedraticosScreen(navController, viewModelCate)
         }
         composable("add_catedratico_screen") {
-            AddCatedraticoScreen(navController)
+            AddCatedraticoScreen(navController, viewModelCate)
         }
         composable("catedraticoInfo/{catedraticoId}",
             arguments = listOf(
